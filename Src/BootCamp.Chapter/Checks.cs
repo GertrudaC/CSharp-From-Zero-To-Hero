@@ -16,7 +16,6 @@ namespace BootCamp.Chapter
     {
         public static int PromptInt(string message)
         {
-            // To do: call your implementation. 
             return 0;
         }
 
