@@ -12,9 +12,6 @@ namespace hw3
     {
         static void Main(string[] args)
         {
-            Class1 zmogus = new Class1();
-            zmogus.Function1();
-            Class1.Function2();
             string namesurname = GetNameSurname();
             int age = GetAge();
             double weight = GetWeight();
@@ -22,6 +19,7 @@ namespace hw3
             double bmi = GetBMI(weight, height);
             Console.WriteLine($"{namesurname} is {age} years old, his/her weight is {weight} kg and his/her height is {height} m.");
             Console.WriteLine($"{namesurname} body-mass index (BMI) is  {bmi} .");
+            Console.ReadLine();
         }
         private static string GetNameSurname()
         {
@@ -40,10 +38,11 @@ namespace hw3
         private static int GetAge()
         {
             Console.Write("Enter your age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-            if (string.IsNullOrEmpty(age))
+            string InputAge = (Console.ReadLine());
+            int age = Convert.ToInt32(InputAge);
+            if (string.IsNullOrEmpty(InputAge))
             {
-                Console.WriteLine($"{age} is not a valid number.");
+                Console.WriteLine($"{InputAge} is not a valid number.");
                 return -1;
             }
             return age;
@@ -51,10 +50,11 @@ namespace hw3
         private static double GetWeight()
         {
             Console.Write("Enter your weight (in kg): ");
-            double weight = Convert.ToDouble(Console.ReadLine());
-            if (string.IsNullOrEmpty(weight))
+            string InputWeight = (Console.ReadLine());
+            double weight = Convert.ToDouble(InputWeight);
+            if (string.IsNullOrEmpty(InputWeight))
             {
-                Console.WriteLine($"{weight} is not a valid number.");
+                Console.WriteLine($"{InputWeight} is not a valid number.");
                 return -1;
             }
             return weight;
@@ -62,10 +62,11 @@ namespace hw3
         private static double GetHeight()
         {
             Console.Write("Enter your height (in m): ");
-            double height = Convert.ToDouble(Console.ReadLine());
-            if (string.IsNullOrEmpty(height))
+            string InputHeight = (Console.ReadLine());
+            double height = Convert.ToDouble(InputHeight);
+            if (string.IsNullOrEmpty(InputHeight))
             {
-                Console.WriteLine($"{height} is not a valid number.");
+                Console.WriteLine($"{InputHeight} is not a valid number.");
                 return -1;
             }
             return height;
